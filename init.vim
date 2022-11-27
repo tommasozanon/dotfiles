@@ -278,6 +278,7 @@ set wildignore+=*.zip,*.png,*.jpg,*.gif,*.pdf,*DS_Store*,*/.git/*,*/node_modules
 nnoremap <Leader>p :Prettier<CR>
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
+let g:prettier#config#print_width = 100
 
 "airline
 let g:airline_theme="base16_gruvbox_dark_hard"
