@@ -282,3 +282,12 @@ let g:prettier#config#print_width = 100
 
 "airline
 let g:airline_theme="base16_gruvbox_dark_hard"
+
+"screen
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
