@@ -10,6 +10,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 call plug#end()
 
 
@@ -21,6 +23,12 @@ set relativenumber
 filetype on
 filetype plugin on
 filetype indent on
+
+"Enable mouse mode
+set mouse=a
+
+"Set completeopt to have a better completion experience
+set completeopt=menuone,noselect
 
 syntax on
 set cursorline
@@ -39,6 +47,8 @@ set list
 
 set cmdheight=2
 set noshowmode
+set clipboard=unnamedplus
+
 "undotree
 nnoremap <F5> :UndotreeToggle<CR>"{{{
 
@@ -302,3 +312,5 @@ autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | e
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+
+
