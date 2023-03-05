@@ -12,6 +12,7 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 
@@ -30,7 +31,7 @@ set mouse=a
 "Set completeopt to have a better completion experience
 set completeopt=menuone,noselect
 
-syntax on
+syntax enable 
 set cursorline
 
 set tabstop=4
@@ -313,4 +314,5 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
-
+"Rust formatter
+let g:rustfmt_autosave = 1
